@@ -23,14 +23,15 @@
                 <span t-field="line.observation"/>
             </td>
         </xpath>
-        <xpath expr="//span[@t-field='o.comment']" position="replace"/>
+        <xpath expr="//span[@t-field='o.narration']" position="replace"/>
+
         <xpath expr="//div[hasclass('clearfix')]" position="after">
             <table class="table table-condensed">
                 <tr>
                     <td style="width:15%;text-align:center;">
                         <strong>Pro-form:</strong>
                         <BR/>
-                        <p t-field="o.origin"/>
+                        <p t-field="o.invoice_origin"/>
                     </td>
                     <td style="width:15%;text-align:center;">
                         <B>Customer Reference:</B>
