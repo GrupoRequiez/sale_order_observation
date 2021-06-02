@@ -16,12 +16,16 @@
             <attribute name="style">width:30%;text-align:center;</attribute>
         </xpath>
         <xpath expr="//t/div/table/thead/tr/th[3]" position="after">
-            <th>Observation</th>
+          <t t-if="o.move_type == 'out_invoice'" class="text-right">
+              <th>Observation</th>
+          </t>
         </xpath>
         <xpath expr="//t/div/table/tbody/t/tr/t/td[3]" position="after">
+          <t t-if="o.move_type == 'out_invoice'" class="text-right">
             <td class="text-right">
                 <span t-field="line.observation"/>
             </td>
+          </t>
         </xpath>
         <xpath expr="//span[@t-field='o.narration']" position="replace"/>
 
